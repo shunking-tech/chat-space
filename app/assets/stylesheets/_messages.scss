@@ -1,0 +1,36 @@
+.header {
+  &__top {
+    background-color: #38AEF0;
+  }
+  &__left {
+    width: 300px;
+    background-color: #253141;
+  }
+  &__right {
+    width: calc(100% - 300px);
+  }
+}
+
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.contents-left {
+  width: 300px;
+  height: 100vw;
+  background-color: #2f3e51;
+}
+
+.ontents-right {
+  width: calc(100% - 300px);
+  background-color: #fafafa;
+  position: relative;
+  &__bottom {
+    position: fixed;
+    bottom: 0px;
+  }
+}
