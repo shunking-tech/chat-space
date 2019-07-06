@@ -1,6 +1,8 @@
+@import 'config/variable';
+
 .header {
   &__top {
-    background-color: #38AEF0;
+    background-color: $skyblueColor;
   }
   &__left {
     width: 300px;
