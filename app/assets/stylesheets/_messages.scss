@@ -16,6 +16,9 @@
     align-items: center;
     padding: 0 20px 0;
     box-sizing: border-box;
+    &__icons {
+      margin: 0 0 0 auto;
+    }
   }
   &__right {
     width: calc(100% - 300px);
