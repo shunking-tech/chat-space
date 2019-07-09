@@ -22,6 +22,15 @@
   }
   &__right {
     width: calc(100% - 300px);
+    &__group-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333333;
+    }
+    &__group-members {
+      font-size: 12px;
+      color: $subInfo;
+    }
   }
 }
 
@@ -60,5 +69,20 @@
   &__bottom {
     position: fixed;
     bottom: 0px;
+  }
+  &__upper-info {
+    &__user {
+      color: $mainInfo;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__date {
+      color: $subInfo;
+      font-size: 12px;
+    }
+  }
+  &__talk {
+    color: $mainInfo;
+    font-size: 14px;
   }
 }

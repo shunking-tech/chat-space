@@ -10,13 +10,13 @@
         = link_to '#' do
           = fa_icon 'cog'
     .header__right
-      test-group
-      Members
-
-      edit
-
-      test-user
-
+      .header__right__group-name
+        test-group
+      .header__right__group-members
+        Member：
+        test-user
+      .header__right__btn-edit
+        edit
 .flex
   .contents-left
     .contents-left__group-name
@@ -35,10 +35,20 @@
       まだメッセージがありません
 
   .contents-right
-    test-user
-    こんにちは！
+    .contents-right__upper-info
+      .contents-right__upper-info__user
+        test-user
+      .contents-right__upper-info__date
+        2019/07/09(Tue) 13:42:26
+    .contents-right__talk
+      こんにちは！
 
-    test-user
-    さようなら
+    .contents-right__upper-info
+      .contents-right__upper-info__user
+        test-user
+      .contents-right__upper-info__date
+        2019/07/09(Tue) 13:42:26
+    .contents-right__talk
+      さようなら
     .contents-right__bottom
       send
