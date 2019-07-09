@@ -5,8 +5,10 @@
     .header__left
       test-user
       .header__left__icons
-        = fa_icon 'edit'
-        = fa_icon 'cog'
+        = link_to '#' do
+          = fa_icon 'edit'
+        = link_to '#' do
+          = fa_icon 'cog'
     .header__right
       test-group
       Members
