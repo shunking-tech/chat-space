@@ -4,7 +4,7 @@
   &__top {
     text-align: center;
     color: white;
-    background-color: $skyblueBackgroundColor;
+    background-color: $skyblueColor;
   }
   &__left {
     width: 300px;
@@ -22,14 +22,28 @@
   }
   &__right {
     width: calc(100% - 300px);
-    &__group-name {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333333;
+    position: relative;
+    &__info {
+      &__group-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333333;
+      }
+      &__group-members {
+        font-size: 12px;
+        color: $subInfo;
+      }
     }
-    &__group-members {
-      font-size: 12px;
-      color: $subInfo;
+    &__btn-edit {
+      text-align : right;
+      height: 40px;
+      line-height: 40px;
+      color: $skyblueColor;
+      position: absolute;
+      right: 0px;
+      top: 28px;
+      padding: 0 20px 0;
+      border: solid 1px $skyblueColor;
     }
   }
 }
