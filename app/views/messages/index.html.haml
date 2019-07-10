@@ -53,4 +53,6 @@
     .contents-right__talk
       さようなら
     .contents-right__bottom
-      send
+      %form{action: "#", method: "post"}
+        %input{type: "text"}
+        %input{type: "submit", value: "send"}
