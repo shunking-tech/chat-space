@@ -86,16 +86,6 @@
   padding: 46px 40px 0;
   box-sizing: border-box;
   position: relative;
-  &__bottom {
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    height: 90px;
-    width: calc(100% - 300px);
-    padding: 20px 40px;
-    box-sizing: border-box;
-    background-color: #dddddd;
-  }
   &__upper-info {
     &__user {
       color: $mainInfo;
@@ -114,5 +104,15 @@
     color: $mainInfo;
     font-size: 14px;
     margin-bottom: 40px;
+  }
+  &__bottom {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 90px;
+    width: calc(100% - 300px);
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: #dddddd;
   }
 }
