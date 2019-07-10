@@ -28,10 +28,12 @@
         font-size: 20px;
         font-weight: bold;
         color: #333333;
+        margin-top: 35px;
       }
       &__group-members {
         font-size: 12px;
         color: $subInfo;
+        margin-top: 15px;
       }
     }
     &__btn-edit {
@@ -79,6 +81,7 @@
 .contents-right {
   width: calc(100% - 300px);
   background-color: #fafafa;
+  padding-top: 46px;
   position: relative;
   &__bottom {
     position: fixed;
@@ -89,14 +92,18 @@
       color: $mainInfo;
       font-size: 16px;
       font-weight: bold;
+      display: inline-block;
+      margin: 0 10px 10px 0;
     }
     &__date {
       color: $subInfo;
       font-size: 12px;
+      display: inline-block;
     }
   }
   &__talk {
     color: $mainInfo;
     font-size: 14px;
+    margin-bottom: 40px;
   }
 }
