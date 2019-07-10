@@ -22,29 +22,15 @@
 .flex
   .contents-left
     = render partial: "messages/group", locals: { groupName: "test-group", topTalk: "さようなら" } 
-
     = render partial: "messages/group", locals: { groupName: "sample-group", topTalk: "hello!" } 
-
     = render partial: "messages/group", locals: { groupName: "example", topTalk: "まだメッセージがありません" } 
-
     = render partial: "messages/group", locals: { groupName: "部分テンプレートgroup", topTalk: "部分テンプレートmessage" } 
 
   .contents-right
-    .contents-right__upper-info
-      .contents-right__upper-info__user
-        test-user
-      .contents-right__upper-info__date
-        2019/07/09(Tue) 13:42:26
-    .contents-right__talk
-      こんにちは！
+    = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "こんにちは！" } 
+    = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "さようなら" } 
+    = render partial: "messages/message", locals: { user: "部分テンプレートuser", date: "部分テンプレートdate", message: "部分テンプレートmessage" } 
 
-    .contents-right__upper-info
-      .contents-right__upper-info__user
-        test-user
-      .contents-right__upper-info__date
-        2019/07/09(Tue) 13:42:26
-    .contents-right__talk
-      さようなら
     .contents-right__bottom
       %form{action: "#", method: "post", class: "contents-right__bottom__form"}
         .contents-right__bottom__form__input-box
