@@ -21,20 +21,13 @@
           Edit
 .flex
   .contents-left
-    .contents-left__group-name
-      test-group
-    .contents-left__top-talk
-      さようなら
+    = render partial: "messages/group", locals: { groupName: "test-group", topTalk: "さようなら" } 
 
-    .contents-left__group-name
-      sample-group
-    .contents-left__top-talk
-      hello!
+    = render partial: "messages/group", locals: { groupName: "sample-group", topTalk: "hello!" } 
 
-    .contents-left__group-name
-      example
-    .contents-left__top-talk
-      まだメッセージがありません
+    = render partial: "messages/group", locals: { groupName: "example", topTalk: "まだメッセージがありません" } 
+
+    = render partial: "messages/group", locals: { groupName: "部分テンプレートgroup", topTalk: "部分テンプレートmessage" } 
 
   .contents-right
     .contents-right__upper-info
