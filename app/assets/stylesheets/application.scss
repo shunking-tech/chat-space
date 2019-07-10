@@ -1,5 +1,13 @@
-@import 'index';
+//difinitions
+@import 'config/variable';
+
+//initial setting
 @import 'reset';
 @import 'font-awesome';
+
+//main
+@import 'index';
+
+//template
 @import 'group';
 @import 'message';
