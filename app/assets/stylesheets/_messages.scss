@@ -86,6 +86,11 @@
   &__bottom {
     position: fixed;
     bottom: 0px;
+    height: 90px;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: #dddddd;
   }
   &__upper-info {
     &__user {
