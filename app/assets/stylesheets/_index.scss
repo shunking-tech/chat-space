@@ -1,0 +1,115 @@
+.header {
+  &__top {
+    text-align: center;
+    color: white;
+    background-color: $skyblueColor;
+  }
+  &__left {
+    width: 300px;
+    background-color: #253141;
+    color: $whiteTextColor;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0;
+    &__icons {
+      margin: 0 0 0 auto;
+    }
+  }
+  &__right {
+    width: calc(100% - 300px);
+    position: relative;
+    border-bottom: solid 1px #eeeeee;
+    padding: 0 40px 0;
+    &__info {
+      &__group-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333333;
+        margin-top: 35px;
+      }
+      &__group-members {
+        font-size: 12px;
+        color: $subInfo;
+        margin-top: 15px;
+      }
+    }
+    &__btn-edit {
+      text-align : right;
+      height: 40px;
+      line-height: 40px;
+      color: $skyblueColor;
+      position: absolute;
+      right: 40px;
+      top: 28px;
+      padding: 0 20px 0;
+      border: solid 1px $skyblueColor;
+    }
+  }
+}
+
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.contents-left {
+  width: 300px;
+  height: 100vw;
+  background-color: #2f3e51;
+  color: $whiteTextColor;
+  padding: 20px 20px 0;
+}
+
+.contents-right {
+  width: calc(100% - 300px);
+  background-color: #fafafa;
+  padding: 46px 40px 0;
+  position: relative;
+  &__bottom {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 90px;
+    width: calc(100% - 300px);
+    padding: 20px 40px;
+    background-color: #dddddd;
+    &__form {
+      display: flex;
+      &__input-box {
+        width: 100%;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: $mainInfo;
+          font-size: 16px;
+          border-style: none;
+        }
+        &__picture-icon {
+          position: absolute;
+          font-size: 1.3rem;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          &__file {
+            display: none;
+          }
+        }
+      }
+      &__submit {
+        height: 50px;
+        width: 100px;
+        color: white;
+        background-color: $skyblueColor;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}

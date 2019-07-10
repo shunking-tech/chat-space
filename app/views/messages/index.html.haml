@@ -1,0 +1,41 @@
+.header
+  .header__top
+    グループを作成しました
+  .flex
+    .header__left
+      test-user
+      .header__left__icons
+        = link_to '#' do
+          = fa_icon 'edit'
+        = link_to '#' do
+          = fa_icon 'cog'
+    .header__right
+      .header__right__info
+        .header__right__info__group-name
+          test-group
+        .header__right__info__group-members
+          Member：
+          test-user
+      .header__right__btn-edit
+        = link_to '#' do
+          Edit
+.flex
+  .contents-left
+    = render partial: "messages/group", locals: { groupName: "test-group", topTalk: "さようなら" } 
+    = render partial: "messages/group", locals: { groupName: "sample-group", topTalk: "hello!" } 
+    = render partial: "messages/group", locals: { groupName: "example", topTalk: "まだメッセージがありません" } 
+    = render partial: "messages/group", locals: { groupName: "部分テンプレートgroup", topTalk: "部分テンプレートmessage" } 
+
+  .contents-right
+    = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "こんにちは！" } 
+    = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "さようなら" } 
+    = render partial: "messages/message", locals: { user: "部分テンプレートuser", date: "部分テンプレートdate", message: "部分テンプレートmessage" } 
+
+    .contents-right__bottom
+      %form{action: "#", method: "post", class: "contents-right__bottom__form"}
+        .contents-right__bottom__form__input-box
+          %input{type: "text", placeholder: "type a message", class: "contents-right__bottom__form__input-box__text"}
+          %label{class: "contents-right__bottom__form__input-box__picture-icon", for: "message-image"}
+            = fa_icon 'image'
+            %input{type: "file", id: "message-image", class: "contents-right__bottom__form__input-box__picture-icon__file"}
+        %input{type: "submit", value: "send", class: "contents-right__bottom__form__submit"}

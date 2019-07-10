@@ -1,0 +1,16 @@
+//difinitions
+@import 'config/variable';
+
+//initial setting
+@import 'reset';
+@import 'font-awesome';
+* {
+  box-sizing: border-box;
+}
+
+//main
+@import 'index';
+
+//template
+@import 'group';
+@import 'message';
