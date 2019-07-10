@@ -24,6 +24,8 @@
     width: calc(100% - 300px);
     position: relative;
     border-bottom: solid 1px #eeeeee;
+    padding: 0 40px 0;
+    box-sizing: border-box;
     &__info {
       &__group-name {
         font-size: 20px;
@@ -43,7 +45,7 @@
       line-height: 40px;
       color: $skyblueColor;
       position: absolute;
-      right: 0px;
+      right: 40px;
       top: 28px;
       padding: 0 20px 0;
       border: solid 1px $skyblueColor;
@@ -81,13 +83,15 @@
 .contents-right {
   width: calc(100% - 300px);
   background-color: #fafafa;
-  padding-top: 46px;
+  padding: 46px 40px 0;
+  box-sizing: border-box;
   position: relative;
   &__bottom {
     position: fixed;
     bottom: 0px;
+    right: 0px;
     height: 90px;
-    width: 100%;
+    width: calc(100% - 300px);
     padding: 20px 40px;
     box-sizing: border-box;
     background-color: #dddddd;
