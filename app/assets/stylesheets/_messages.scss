@@ -119,7 +119,11 @@
       &__textbox {
         height: 50px;
         width: 100%;
+        padding: 0 40px 0 10px;
         box-sizing: border-box;
+        color: $mainInfo;
+        font-size: 16px;
+        border-style: none;
       }
       &__submit {
         height: 50px;
