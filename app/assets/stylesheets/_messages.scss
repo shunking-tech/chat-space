@@ -23,6 +23,7 @@
   &__right {
     width: calc(100% - 300px);
     position: relative;
+    border-bottom: solid 1px #eeeeee;
     &__info {
       &__group-name {
         font-size: 20px;
@@ -65,7 +66,6 @@
   color: $whiteTextColor;
   padding: 20px 20px 0;
   box-sizing: border-box;
-
   &__group-name {
     font-size: 15px;
     font-weight: bold;
