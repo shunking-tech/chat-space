@@ -114,5 +114,21 @@
     padding: 20px 40px;
     box-sizing: border-box;
     background-color: #dddddd;
+    &__form {
+      display: flex;
+      &__textbox {
+        height: 50px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      &__submit {
+        height: 50px;
+        width: 100px;
+        box-sizing: border-box;
+        color: white;
+        background-color: $skyblueColor;
+        margin-left: 15px;
+      }
+    }
   }
 }
