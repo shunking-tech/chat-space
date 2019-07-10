@@ -4,6 +4,9 @@
 //initial setting
 @import 'reset';
 @import 'font-awesome';
+* {
+  box-sizing: border-box;
+}
 
 //main
 @import 'index';
