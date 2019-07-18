@@ -1,0 +1,12 @@
+.header {
+  &__top {
+    text-align: center;
+    color: white;
+  &__notice {
+      background-color: $skyblueColor;
+    }
+    &__alert {
+      background-color: $alert_orange;
+    }
+  }
+}

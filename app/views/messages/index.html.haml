@@ -1,24 +1,21 @@
-.header
-  .header__top
-    グループを作成しました
-  .flex
-    .header__left
-      test-user
-      .header__left__icons
-        = link_to '#' do
-          = fa_icon 'edit'
-        = link_to '#' do
-          = fa_icon 'cog'
-    .header__right
-      .header__right__info
-        .header__right__info__group-name
-          test-group
-        .header__right__info__group-members
-          Member：
-          test-user
-      .header__right__btn-edit
-        = link_to '#' do
-          Edit
+.flex
+  .header__left
+    = current_user.name
+    .header__left__icons
+      = link_to '#' do
+        = fa_icon 'edit'
+      = link_to edit_user_path(current_user) do
+        = fa_icon 'cog'
+  .header__right
+    .header__right__info
+      .header__right__info__group-name
+        test-group
+      .header__right__info__group-members
+        Member：
+        test-user
+    .header__right__btn-edit
+      = link_to '#' do
+        Edit
 .flex
   .contents-left
     = render partial: "messages/group", locals: { groupName: "test-group", topTalk: "さようなら" } 
