@@ -1,6 +1,7 @@
 .header
   .header__top
-    グループを作成しました
+    - flash.each do |key, value|
+      = content_tag(:div, value, class: "header__top__#{key}")
   .flex
     .header__left
       = current_user.name
