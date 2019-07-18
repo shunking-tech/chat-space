@@ -7,8 +7,5 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .header
-      .header__top
-        - flash.each do |key, value|
-          = content_tag(:div, value, class: "header__top__#{key}")
+    = render partial: "layouts/module/flash"
     = yield
