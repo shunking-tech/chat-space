@@ -1,11 +1,5 @@
 .flex
-  .header__left
-    = current_user.name
-    .header__left__icons
-      = link_to new_group_path do
-        = fa_icon 'edit'
-      = link_to edit_user_path(current_user) do
-        = fa_icon 'cog'
+  = render partial: "shared/side_bar_header"
   .header__right
     .header__right__info
       .header__right__info__group-name
@@ -17,11 +11,7 @@
       = link_to edit_group_path(1) do     # グループのidは仮置き
         Edit
 .flex
-  .contents-left
-    = render partial: "messages/group", locals: { groupName: "test-group", topTalk: "さようなら" } 
-    = render partial: "messages/group", locals: { groupName: "sample-group", topTalk: "hello!" } 
-    = render partial: "messages/group", locals: { groupName: "example", topTalk: "まだメッセージがありません" } 
-    = render partial: "messages/group", locals: { groupName: "部分テンプレートgroup", topTalk: "部分テンプレートmessage" } 
+  = render partial: "shared/side_bar_content"
 
   .contents-right
     = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "こんにちは！" } 

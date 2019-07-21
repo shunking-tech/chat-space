@@ -1,0 +1,7 @@
+.contents-left
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      .group-name
+        = group.name
+      .top-talk
+        メッセージはまだありません。
