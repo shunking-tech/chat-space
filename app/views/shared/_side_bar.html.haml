@@ -1,0 +1,13 @@
+.header__left
+  = current_user.name
+  .header__left__icons
+    = link_to new_group_path do
+      = fa_icon 'edit'
+    = link_to edit_user_path(current_user) do
+      = fa_icon 'cog'
+
+.contents-left
+  = render partial: "messages/group", locals: { groupName: "test-group", topTalk: "さようなら" } 
+  = render partial: "messages/group", locals: { groupName: "sample-group", topTalk: "hello!" } 
+  = render partial: "messages/group", locals: { groupName: "example", topTalk: "まだメッセージがありません" } 
+  = render partial: "messages/group", locals: { groupName: "部分テンプレートgroup", topTalk: "部分テンプレートmessage" } 
