@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
 
   end
 
-  def updata
+  def update
 
   end
 
