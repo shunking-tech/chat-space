@@ -1,5 +1,7 @@
 .contents-left
-  = render partial: "messages/group", locals: { groupName: "test-group", topTalk: "さようなら" } 
-  = render partial: "messages/group", locals: { groupName: "sample-group", topTalk: "hello!" } 
-  = render partial: "messages/group", locals: { groupName: "example", topTalk: "まだメッセージがありません" } 
-  = render partial: "messages/group", locals: { groupName: "部分テンプレートgroup", topTalk: "部分テンプレートmessage" } 
+  - current_user.groups.each do |group|
+    = link_to group_messages_path(group) do
+      .group-name
+        = group.name
+      .top-talk
+        メッセージはまだありません。
