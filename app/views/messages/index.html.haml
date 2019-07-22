@@ -19,10 +19,10 @@
     = render partial: "messages/message", locals: { user: "部分テンプレートuser", date: "部分テンプレートdate", message: "部分テンプレートmessage" } 
 
     .contents-right__bottom
-      %form{action: "#", method: "post", class: "contents-right__bottom__form"}
+      = form_for([@group, @message], html: {class: "contents-right__bottom__form"}) do |f|
         .contents-right__bottom__form__input-box
-          %input{type: "text", placeholder: "type a message", class: "contents-right__bottom__form__input-box__text"}
+          = f.text_field :content, placeholder: "type a message", class: "contents-right__bottom__form__input-box__text"
           %label{class: "contents-right__bottom__form__input-box__picture-icon", for: "message-image"}
             = fa_icon 'image'
-            %input{type: "file", id: "message-image", class: "contents-right__bottom__form__input-box__picture-icon__file"}
-        %input{type: "submit", value: "send", class: "contents-right__bottom__form__submit"}
+            = f.file_field :image, id: "message-image", class: "contents-right__bottom__form__input-box__picture-icon__file"
+        = f.submit "send", class: "contents-right__bottom__form__submit"
