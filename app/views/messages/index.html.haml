@@ -14,9 +14,7 @@
   = render partial: "shared/side_bar_content"
 
   .contents-right
-    = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "こんにちは！" } 
-    = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "さようなら" } 
-    = render partial: "messages/message", locals: { user: "部分テンプレートuser", date: "部分テンプレートdate", message: "部分テンプレートmessage" } 
+    = render @messages
 
     .contents-right__bottom
       = form_for([@group, @message], html: {class: "contents-right__bottom__form"}) do |f|
