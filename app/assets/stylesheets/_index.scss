@@ -1,5 +1,6 @@
 .header {
   &__left {
+    height: 100px;
     width: 300px;
     background-color: #253141;
     color: $whiteTextColor;
@@ -13,6 +14,7 @@
     }
   }
   &__right {
+    height: 100px;
     width: calc(100% - 300px);
     position: relative;
     border-bottom: solid 1px #eeeeee;
