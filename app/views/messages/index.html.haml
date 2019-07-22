@@ -6,8 +6,8 @@
         = @group.name
       .header__right__info__group-members
         Member：
-        -# - @group.users.each do |u|
-        -#   = u.name
+        - @group.users.each do |u|
+          = u.name
     .header__right__btn-edit
       = link_to edit_group_path(@group) do     # グループのidは仮置き
         Edit
