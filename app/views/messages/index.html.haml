@@ -3,20 +3,19 @@
   .header__right
     .header__right__info
       .header__right__info__group-name
-        test-group
+        = @group.name
       .header__right__info__group-members
         Member：
-        test-user
+        - @group.users.each do |u|
+          = u.name
     .header__right__btn-edit
-      = link_to edit_group_path(1) do     # グループのidは仮置き
+      = link_to edit_group_path(@group) do     # グループのidは仮置き
         Edit
 .flex
   = render partial: "shared/side_bar_content"
 
   .contents-right
-    = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "こんにちは！" } 
-    = render partial: "messages/message", locals: { user: "test-user", date: "2019/07/09(Tue) 13:42:26", message: "さようなら" } 
-    = render partial: "messages/message", locals: { user: "部分テンプレートuser", date: "部分テンプレートdate", message: "部分テンプレートmessage" } 
+    = render @messages
 
     .contents-right__bottom
       = form_for([@group, @message], html: {class: "contents-right__bottom__form"}) do |f|

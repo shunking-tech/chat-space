@@ -1,7 +1,10 @@
 .upper-info
   .upper-info__user
-    = user
+    = message.user.name
   .upper-info__date
-    = date
+    = message.created_at.strftime("%Y/%m/%d %H:%M")
 .message
-  = message
+  - if message.content.present?
+    %p
+      = message.content
+  = image_tag message.image.url if message.image.present?
