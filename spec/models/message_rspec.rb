@@ -6,5 +6,8 @@ RSpec.describe Message, type: :model do
   end
 
   describe 'バリデーション' do
+    it 'メッセージがあれば、OK' do
+      expect(@message.content.valid?).to eq(true)
+    end
   end
 end
