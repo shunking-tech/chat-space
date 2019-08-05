@@ -1,4 +1,20 @@
 $(function(){
+  function buildHTML(message){
+    var html = `<div class="upper-info">
+                  <div class="upper-info__user">
+                    ${message.name}
+                  </div>
+                  <div class="upper-info__date">
+                    ${message.created_at}
+                  </div>
+                </div>
+                <div class="message">
+                  <p>
+                    ${message.content}
+                  </p>
+                </div>`
+    return html;
+  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -11,5 +27,11 @@ $(function(){
       processData: false,
       contentType: false
     })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.contents-right').append(html)
+      $('.contents-right__bottom__form__input-box__text').val('')
+    })
+
   });
 });
