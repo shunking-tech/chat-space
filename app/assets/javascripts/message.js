@@ -34,5 +34,8 @@ $(function(){
       $('html, body').animate({ scrollTop: $('html, body')[0].scrollHeight});
       $('.contents-right__bottom__form__submit').attr('disabled', false);
     })
+    .fail(function(){
+      alert('error');
+    })
   });
 });
