@@ -36,6 +36,7 @@ $(function(){
     })
     .fail(function(){
       alert('error');
+      $('.contents-right__bottom__form__submit').attr('disabled', false);
     })
   });
 });
