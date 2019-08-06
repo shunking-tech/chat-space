@@ -12,6 +12,7 @@ $(function(){
                   <p>
                     ${message.content}
                   </p>
+                  <img src="${message.image}">
                 </div>`
     return html;
   }
