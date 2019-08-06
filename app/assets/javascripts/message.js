@@ -1,5 +1,7 @@
 $(function(){
   function buildHTML(message){
+    var content = (message.content != null) ? `<p>${message.content}</p>` : ``;
+    var image = (message.image != null) ? `<img src="${message.image}">` : ``;
     var html = `<div class="upper-info">
                   <div class="upper-info__user">
                     ${message.name}
@@ -8,16 +10,10 @@ $(function(){
                     ${message.created_at}
                   </div>
                 </div>
-                <div class="message">`
-                  if (message.content != null) {
-                    html += `<p>
-                              ${message.content}
-                            </p>`
-                  }
-                  if (message.image != null) {
-                    html += `<img src="${message.image}">`
-                  }
-                + `</div>`
+                <div class="message">
+                  ${content}
+                  ${image}
+                </div>`
                 return html;
   }
   $('#new_message').on('submit', function(e){
