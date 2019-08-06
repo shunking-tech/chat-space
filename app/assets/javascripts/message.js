@@ -34,9 +34,9 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
+      var formElement = document.getElementById('new_message')
       $('.contents-right__messages').append(html)
-      $('.contents-right__bottom__form__input-box__text').val('')
-      $('#message-image').val('')
+      formElement.reset();
       $('html, body').animate({ scrollTop: $('html, body')[0].scrollHeight});
       $('.contents-right__bottom__form__submit').attr('disabled', false);
     })
