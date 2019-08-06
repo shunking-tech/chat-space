@@ -8,13 +8,17 @@ $(function(){
                     ${message.created_at}
                   </div>
                 </div>
-                <div class="message">
-                  <p>
-                    ${message.content}
-                  </p>
-                  <img src="${message.image}">
-                </div>`
-    return html;
+                <div class="message">`
+                  if (message.content != null) {
+                    html += `<p>
+                              ${message.content}
+                            </p>`
+                  }
+                  if (message.image != null) {
+                    html += `<img src="${message.image}">`
+                  }
+                + `</div>`
+                return html;
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -32,6 +36,7 @@ $(function(){
       var html = buildHTML(data);
       $('.contents-right').append(html)
       $('.contents-right__bottom__form__input-box__text').val('')
+      $('#message-image').val('')
       $('html, body').animate({ scrollTop: $('html, body')[0].scrollHeight});
       $('.contents-right__bottom__form__submit').attr('disabled', false);
     })
