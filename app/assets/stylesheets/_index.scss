@@ -74,6 +74,9 @@
   background-color: #fafafa;
   padding: 46px 40px 0;
   position: relative;
+  &__messages {
+    padding-bottom: 90px;
+  }
   &__bottom {
     position: fixed;
     bottom: 0px;
