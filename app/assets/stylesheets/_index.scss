@@ -61,7 +61,6 @@
 
 .contents-left {
   width: 300px;
-  height: 100vw;
   background-color: #2f3e51;
   padding: 20px 20px 0;
 }
@@ -74,6 +73,9 @@
   background-color: #fafafa;
   padding: 46px 40px 0;
   position: relative;
+  &__messages {
+    padding-bottom: 90px;
+  }
   &__bottom {
     position: fixed;
     bottom: 0px;

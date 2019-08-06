@@ -9,13 +9,14 @@
         - @group.users.each do |u|
           = u.name
     .header__right__btn-edit
-      = link_to edit_group_path(@group) do     # グループのidは仮置き
+      = link_to edit_group_path(@group) do
         Edit
 .flex
   = render partial: "shared/side_bar_content"
 
   .contents-right
-    = render @messages
+    .contents-right__messages
+      = render @messages
 
     .contents-right__bottom
       = form_for([@group, @message], html: {class: "contents-right__bottom__form"}) do |f|
