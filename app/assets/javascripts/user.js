@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(user){
+  function buildAddHTML(user){
     var html = `<div class="chat-group-user clearfix chat-group-form__field--right">
                   <p class="chat-group-user__name">${user.name}</p>
                   <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
@@ -23,7 +23,7 @@ $(function(){
       $('#user-search-result').empty();
       if(keyword != 0){
         for ( var i = 0; i < users.length; i++ ) {
-          html = buildHTML(users[i]);
+          html = buildAddHTML(users[i]);
           $('#user-search-result').append(html);
         }
       }
