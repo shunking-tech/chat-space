@@ -46,11 +46,8 @@ $(function(){
     var clickedBotton = this
     var selectedUserElement = $(this).parent()
     var userId = clickedBotton.getAttribute('data-user-id')
-    console.log(userId)
     var userName = selectedUserElement.find('.chat-group-user__name').text()
-    console.log(userName)
     var user = {id: userId, name: userName}
-    console.log(user['id'])
     selectedUserElement.remove()
     html = buildMemberHTML(user)
     $('#user-chat-member').append(html);
