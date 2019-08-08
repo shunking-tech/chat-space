@@ -7,14 +7,14 @@ $(function(){
     return html;
   }
 
-  $(function buildMemberHTML(user){
-    var html = `<div class='chat-group-user'>
-                  <input name='group[user_ids][]' type='hidden' value='${user.id}'>
-                  <p class='chat-group-user__name'>${user.name}</p>
+  function buildMemberHTML(user){
+    var html = `<div class='chat-group-user chat-group-form__field--right'>
+                  <input name='group[user_ids][]' type='hidden' value='${user['id']}'>
+                  <p class='chat-group-user__name'>${user['name']}</p>
                   <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
                 </div>`
     return html;
-  })
+  }
 
   $('#user-search-field').on('keyup', function(e){
     var url = '/users'
@@ -43,6 +43,16 @@ $(function(){
   })
 
   $('#user-search-result').on('click','.chat-group-user__btn--add' , function(e){
-    $(this).parent().remove()
+    var clickedBotton = this
+    var selectedUserElement = $(this).parent()
+    var userId = clickedBotton.getAttribute('data-user-id')
+    console.log(userId)
+    var userName = selectedUserElement.find('.chat-group-user__name').text()
+    console.log(userName)
+    var user = {id: userId, name: userName}
+    console.log(user['id'])
+    selectedUserElement.remove()
+    html = buildMemberHTML(user)
+    $('#user-chat-member').append(html);
   })
 })
