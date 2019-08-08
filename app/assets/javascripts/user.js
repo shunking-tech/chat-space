@@ -52,4 +52,9 @@ $(function(){
     html = buildMemberHTML(user)
     $('#user-chat-member').append(html);
   })
+
+  $('#user-chat-member').on('click','.chat-group-user__btn--remove' , function(e){
+    var selectedUserElement = $(this).parent()
+    selectedUserElement.remove()
+  })
 })
