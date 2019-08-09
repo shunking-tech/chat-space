@@ -30,6 +30,9 @@
     #user-chat-member
       .chat-group-form__field--left
         .chat-group-form__label チャットメンバー
+      .chat-group-user.chat-group-form__field--right
+        %p.chat-group-user__name
+          = current_user.name
       - @group.users.each do |u|
         .chat-group-user.chat-group-form__field--right
           %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{u.id}"}/
