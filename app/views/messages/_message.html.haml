@@ -1,10 +1,11 @@
-.upper-info
-  .upper-info__user
-    = message.user.name
-  .upper-info__date
-    = message.created_at.strftime("%Y/%m/%d %H:%M")
-.message
-  - if message.content.present?
-    %p
-      = message.content
-  = image_tag message.image.url if message.image.present?
+%section#blog{"data-message-id": message.id}
+  .upper-info
+    .upper-info__user
+      = message.user.name
+    .upper-info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .message
+    - if message.content.present?
+      %p
+        = message.content
+    = image_tag message.image.url if message.image.present?
