@@ -2,17 +2,19 @@ $(function(){
   function buildHTML(message){
     var content = (message.content != null) ? `<p>${message.content}</p>` : ``;
     var image = (message.image != null) ? `<img src="${message.image}">` : ``;
-    var html = `<div class="upper-info">
-                  <div class="upper-info__user">
-                    ${message.name}
+    var html = `<section id="message" data-message-id="${message.id}">
+                  <div class="upper-info">
+                    <div class="upper-info__user">
+                      ${message.name}
+                    </div>
+                    <div class="upper-info__date">
+                      ${message.created_at}
+                    </div>
                   </div>
-                  <div class="upper-info__date">
-                    ${message.created_at}
+                  <div class="message">
+                    ${content}
+                    ${image}
                   </div>
-                </div>
-                <div class="message">
-                  ${content}
-                  ${image}
                 </div>`
                 return html;
   }
