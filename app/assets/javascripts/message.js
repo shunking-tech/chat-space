@@ -69,10 +69,9 @@ $(function(){
         console.log(value);
         insertHTML += buildHTML(value);
       })
-      //メッセージが入ったHTMLを取得
-
       //メッセージを追加
       $('.contents-right__messages').append(insertHTML);
+      $('html, body').animate({ scrollTop: $('html, body')[0].scrollHeight});
     })
     .fail(function() {
       console.log('error');
