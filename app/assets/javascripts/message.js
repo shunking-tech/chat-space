@@ -74,7 +74,7 @@ $(function(){
       $('html, body').animate({ scrollTop: $('html, body')[0].scrollHeight});
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   if(document.URL.match("/messages")) {
