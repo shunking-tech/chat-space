@@ -47,9 +47,7 @@ $(function(){
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     var message_array = document.getElementsByTagName('section');
-    console.log(message_array)
     last_message_id = message_array[message_array.length -1].getAttribute('data-message-id');
-    console.log(last_message_id)
     $.ajax({
       //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
       url: 'api/messages',
@@ -60,13 +58,10 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('sucsess');
-      console.log(messages);
       //追加するHTMLの入れ物を作る
       var insertHTML = '';
       //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
       messages.forEach(function(value){
-        console.log(value);
         insertHTML += buildHTML(value);
       })
       //メッセージを追加
