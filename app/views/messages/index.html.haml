@@ -17,12 +17,11 @@
   .contents-right
     .contents-right__messages
       = render @messages
-
-    .contents-right__bottom
-      = form_for([@group, @message], html: {class: "contents-right__bottom__form"}) do |f|
-        .contents-right__bottom__form__input-box
-          = f.text_field :content, placeholder: "type a message", class: "contents-right__bottom__form__input-box__text"
-          %label{class: "contents-right__bottom__form__input-box__picture-icon", for: "message-image"}
-            = fa_icon 'image'
-            = f.file_field :image, id: "message-image", class: "contents-right__bottom__form__input-box__picture-icon__file"
-        = f.submit "send", class: "contents-right__bottom__form__submit"
+.contents-right__bottom
+  = form_for([@group, @message], html: {class: "contents-right__bottom__form"}) do |f|
+    .contents-right__bottom__form__input-box
+      = f.text_field :content, placeholder: "type a message", class: "contents-right__bottom__form__input-box__text"
+      %label{class: "contents-right__bottom__form__input-box__picture-icon", for: "message-image"}
+        = fa_icon 'image'
+        = f.file_field :image, id: "message-image", class: "contents-right__bottom__form__input-box__picture-icon__file"
+    = f.submit "send", class: "contents-right__bottom__form__submit"

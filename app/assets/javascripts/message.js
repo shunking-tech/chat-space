@@ -35,7 +35,7 @@ $(function(){
       var formElement = document.getElementById('new_message')
       $('.contents-right__messages').append(html)
       formElement.reset();
-      $('html, body').animate({ scrollTop: $('html, body')[0].scrollHeight});
+      $('.contents-right__messages').animate({ scrollTop: $('.contents-right__messages')[0].scrollHeight});
       $('.contents-right__bottom__form__submit').attr('disabled', false);
     })
     .fail(function(){
@@ -63,10 +63,10 @@ $(function(){
       //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
       messages.forEach(function(value){
         insertHTML += buildHTML(value);
-      })
       //メッセージを追加
       $('.contents-right__messages').append(insertHTML);
-      $('html, body').animate({ scrollTop: $('html, body')[0].scrollHeight});
+      $('.contents-right__messages').animate({ scrollTop: $('.contents-right__messages')[0].scrollHeight});
+      })
     })
     .fail(function() {
       alert('error');

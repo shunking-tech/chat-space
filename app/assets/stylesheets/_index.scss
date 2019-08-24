@@ -75,7 +75,9 @@
   padding: 46px 40px 0;
   position: relative;
   &__messages {
+    height: calc(100vh - 190px);
     padding-bottom: 90px;
+    overflow: auto;
   }
   &__bottom {
     position: fixed;
