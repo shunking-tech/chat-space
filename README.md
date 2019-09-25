@@ -1,28 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+## 機能一覧
+  - ユーザー登録・ログイン・ログアウト・修正
+  - 複数ユーザーでのチャット機能
+  - チャットメッセージ送信時の非同期通信
+  - チャットメッセージの自動更新
 
 ## usersテーブル
 
