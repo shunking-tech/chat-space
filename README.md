@@ -6,6 +6,12 @@
   - チャットメッセージ送信時の非同期通信
   - チャットメッセージの自動更新
 
+## 使用技術
+  - Ruby on Rails
+  - javascript,jQuery,ajax
+  - haml,scss
+  - AWS(EC2,S3)
+
 ## usersテーブル
 
 |Column|Type|Options|
